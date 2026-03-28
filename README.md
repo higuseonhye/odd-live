@@ -6,7 +6,7 @@ ODD PLAYGROUND — product docs and AgentOS with the debate + evidence extension
 
 | Path | Role |
 |------|------|
-| `docs/` | Vision, CFP, product notes |
+| `docs/` | Vision and product notes (e.g. `vision-evolutionary-policy.md`) |
 | `agentos/` | Runnable AgentOS (`kind: debate`, `debate_*` events, Debates tab in the dashboard) |
 
 ## Run
