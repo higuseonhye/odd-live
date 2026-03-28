@@ -1,11 +1,5 @@
 # Vision: Evolutionary Policy & Living Constitution
 
-**ODD PLAYGROUND · Seonhye Gu · Seoul, Korea**
-
-*Draft for investor-facing materials (e.g. YC, a16z Speedrun) — Vision section only. Includes capabilities not yet implemented.*
-
----
-
 ### One-line vision
 
 A **living constitution** for AI agents — **Policy** that agents and humans **co-evolve**.
@@ -85,11 +79,11 @@ Improving capability alone can erode control. Improving values and judgment can 
 | Observability — replay + System MRI | Observability + **simulation** + transparent runtime |
 | Learning — not yet | **Policy self-improvement** loop |
 
-### One-liner for investors
+### In one sentence
 
 “We’re building the **governance layer** that makes AI agents safe to deploy in the real world — not by crippling what they can do, but by giving them a **value system** they can evolve.”
 
-### Honest assessment
+### Implementation status
 
 Most of this vision is **not** shipped yet.
 
@@ -97,8 +91,4 @@ Most of this vision is **not** shipped yet.
 
 **Next to build:** agent debate + evidence as first-class artifacts, then a policy self-improvement loop.
 
-The foundation we are laying matches where we believe the product must go.
-
----
-
-*Document version: 2026-03-29 · ODD PLAYGROUND*
+The foundation in place is aimed at that direction.
