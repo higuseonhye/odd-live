@@ -14,9 +14,32 @@ from agentos.runtime.system_mri import FailureAnalyzer
 from agentos.runtime.workflow_runner import WorkflowRunner
 
 
+def _resolve_workflow_path(raw: Path) -> Path:
+    """
+    Resolve workflow path: accept ``workflows/foo`` and try ``foo.yaml`` / ``foo.yml``.
+    """
+    p = raw.expanduser()
+    if p.is_file():
+        return p.resolve()
+    if not p.suffix:
+        for ext in (".yaml", ".yml"):
+            cand = p.parent / f"{p.name}{ext}"
+            if cand.is_file():
+                return cand.resolve()
+        if p.name == "debate":
+            alt = p.parent / "debate_sample.yaml"
+            if alt.is_file():
+                return alt.resolve()
+    raise FileNotFoundError(
+        f"Workflow file not found: {raw}\n"
+        "Hint: use a full path including extension, e.g. workflows/debate_sample.yaml",
+    ) from None
+
+
 def _cmd_run(args: argparse.Namespace) -> int:
     runner = WorkflowRunner()
-    rid = runner.start_run(args.workflow)
+    wf = _resolve_workflow_path(args.workflow)
+    rid = runner.start_run(wf)
     print(rid)
     return 0
 

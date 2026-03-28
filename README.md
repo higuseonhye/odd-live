@@ -17,6 +17,8 @@ pip install -e ".[dev]"
 pip install -e "./agentos-sdk[dev]"
 python -m pytest tests agentos-sdk/tests -q
 python -m agentos run workflows/debate_sample.yaml
+# shorthand (same workflow):
+python -m agentos run workflows/debate
 ```
 
 API and dashboard setup: `agentos/README.md`.
