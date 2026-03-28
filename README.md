@@ -1,5 +1,7 @@
 # odd-live
 
+**GitHub:** [github.com/higuseonhye/odd-live](https://github.com/higuseonhye/odd-live)
+
 Product and integration work for **ODD PLAYGROUND** — kept separate from the upstream [`odd-agentos`](https://github.com/higuseonhye/odd-agentos) repo.
 
 ## Layout
