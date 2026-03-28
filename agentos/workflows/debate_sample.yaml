@@ -1,0 +1,29 @@
+name: debate_sample
+steps:
+  - id: context
+    agent: greeter
+    agent_tags: []
+    risk_level: low
+    input: "Establish context for release decision"
+    requires_approval: false
+
+  - id: release_debate
+    kind: debate
+    agent: debate-coordinator
+    agent_tags: [debate]
+    risk_level: medium
+    topic: "Ship the agent orchestration MVP this week?"
+    debate_rounds: 2
+    participants:
+      - agent: advocate-agent
+        role: advocate
+      - agent: skeptic-agent
+        role: skeptic
+    requires_approval: false
+
+  - id: summarize
+    agent: greeter
+    agent_tags: []
+    risk_level: low
+    input: "Summarize debate outcome for stakeholders"
+    requires_approval: false

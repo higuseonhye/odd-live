@@ -1,0 +1,19 @@
+# Root (odd-live)
+.DS_Store
+Thumbs.db
+
+# Nested AgentOS (see agentos/.gitignore)
+agentos/__pycache__/
+agentos/**/__pycache__/
+agentos/*.py[cod]
+agentos/.pytest_cache/
+agentos/.mypy_cache/
+agentos/.ruff_cache/
+agentos/venv/
+agentos/.venv/
+agentos/runs/
+agentos/reports/
+agentos/.env
+agentos/dashboard/node_modules/
+agentos/dashboard/dist/
+agentos/*.egg-info/
